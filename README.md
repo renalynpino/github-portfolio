@@ -14,3 +14,5 @@ This is my personal portfolio website built using HTML and CSS.
 
 ## How to View
 Open `index.html` in a browser or deploy using GitHub Pages.
+
+or click this link http://127.0.0.1:5500/certificates.html
