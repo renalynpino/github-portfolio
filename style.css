@@ -176,7 +176,6 @@ h2::after {
 
 .nav-link:hover {
     color: #c77dff;
-    transform: translateY(-2px);
 }
 
 .nav-link.active {
