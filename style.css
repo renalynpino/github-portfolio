@@ -406,12 +406,16 @@ h2::after {
 }
 
 .contact-item p {
-    color: #e0aaff;
+    color: #ffffff;
     margin-bottom: 8px;
     line-height: 1.6;
 }
 
 .contact-item strong {
+    color: #c77dff;
+}
+
+.contact-item a {
     color: #ffffff;
 }
 
