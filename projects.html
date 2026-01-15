@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Renalyn N. Pino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="profile-container">
+            <img src="./profile.jpg" alt="Renalyn Pino" class="profile-photo">
+            <div class="profile-info">
+                <h1>Renalyn N. Pino</h1>
+                <p class="title">Computer Science Student</p>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link active">Projects</a>
+            <a href="certificates.html" class="nav-link">Certificates</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-item" onclick="toggleDetails('project1')">
+                <h3>Bee Colony Monitoring System <span class="arrow">▼</span></h3>
+                <div id="project1" class="project-details">
+                    <p><strong>Technologies:</strong> Python, OpenCV, Machine Learning</p>
+                    <p><strong>Description:</strong> Developed a system using image processing and machine learning to detect brood stages and queen cell maturity from real bee farm data.</p>
+                    <p><strong>Features:</strong></p>
+                    <ul>
+                        <li>Real-time image processing</li>
+                        <li>ML model for stage detection</li>
+                        <li>Data visualization dashboard</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item" onclick="toggleDetails('project2')">
+                <h3>Computer Repair Shop Management System <span class="arrow">▼</span></h3>
+                <div id="project2" class="project-details">
+                    <p><strong>Technologies:</strong> PHP, MySQL, HTML, CSS</p>
+                    <p><strong>Description:</strong> A web-based system built to manage repair requests, customers, and services for computer repair shops.</p>
+                    <p><strong>Features:</strong></p>
+                    <ul>
+                        <li>Customer management</li>
+                        <li>Repair tracking system</li>
+                        <li>Invoice generation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="contact-footer">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> renalynpino@example.com</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Renalyn N. Pino</p>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            const arrow = details.previousElementSibling.querySelector('.arrow');
+            
+            if (details.style.display === 'block') {
+                details.style.display = 'none';
+                arrow.textContent = '▼';
+            } else {
+                details.style.display = 'block';
+                arrow.textContent = '▲';
+            }
+        }
+    </script>
+
+</body>
+</html>
