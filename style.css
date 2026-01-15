@@ -393,29 +393,7 @@ footer {
     border-top: 2px solid rgba(157, 78, 221, 0.3);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .main-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin: 20px auto;
-        padding: 0 15px;
-    }
-    
-    .profile-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .profile-info h1 {
-        font-size: 2rem;
-    }
-    
-    section {
-        padding: 20px;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
+/* Fixed desktop layout for all devices */
+body {
+    min-width: 1000px;
 }
