@@ -71,6 +71,11 @@
     </footer>
 
     <script>
+        // Force viewport reset on page load
+        window.addEventListener('load', function() {
+            document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1000, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+        });
+
         function toggleDetails(id) {
             const details = document.getElementById(id);
             const arrow = details.previousElementSibling.querySelector('.arrow');
