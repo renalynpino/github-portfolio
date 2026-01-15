@@ -172,8 +172,6 @@ h2::after {
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
 }
 
 .nav-link:hover {
@@ -386,11 +384,12 @@ h2::after {
 }
 
 .contact-footer .contact-info a {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .contact-footer .contact-info a:hover {
-    color: #c77dff;
+    color: #c77dff !important;
+    text-shadow: none;
 }
 
 .contact-section {
