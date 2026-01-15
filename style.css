@@ -132,7 +132,7 @@ h2::after {
 .project-details, .achievement-details {
     display: none;
     padding: 0 20px 20px 20px;
-    color: #e0aaff;
+    color: #ffffff;
     border-top: 1px solid rgba(157, 78, 221, 0.2);
 }
 
