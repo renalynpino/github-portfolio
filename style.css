@@ -313,7 +313,7 @@ h2::after {
     border-radius: 15px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(157, 78, 221, 0.2);
-    padding: 10px;
+    padding: 10px 60px;
     max-width: 1200px;
     margin: 10px auto;
     text-align: center;
