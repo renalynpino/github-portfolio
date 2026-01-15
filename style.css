@@ -315,7 +315,7 @@ h2::after {
     border-radius: 15px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(157, 78, 221, 0.2);
-    padding: 10px 20px;
+    padding: 8px 20px;
     max-width: 1400px;
     width: calc(100% - 40px);
     margin: 10px auto;
@@ -323,8 +323,8 @@ h2::after {
 }
 
 .contact-footer h2 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 8px;
 }
 
 .contact-footer .contact-info {
@@ -332,8 +332,8 @@ h2::after {
 }
 
 .contact-footer .contact-info p {
-    margin: 4px 0;
-    font-size: 0.85rem;
+    margin: 3px 0;
+    font-size: 0.8rem;
 }
 
 .contact-footer .contact-info strong {
