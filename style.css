@@ -452,7 +452,7 @@ footer {
 
 /* Fixed desktop layout for all devices */
 body {
-    min-width: 320px;
+    min-width: 1000px;
 }
 
 /* Landing Page Styles */
