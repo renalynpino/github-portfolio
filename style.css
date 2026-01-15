@@ -383,6 +383,14 @@ h2::after {
     color: #c77dff;
 }
 
+.contact-footer .contact-info a {
+    color: #ffffff;
+}
+
+.contact-footer .contact-info a:hover {
+    color: #c77dff;
+}
+
 .contact-section {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
