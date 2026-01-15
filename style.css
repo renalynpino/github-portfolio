@@ -458,10 +458,7 @@ footer {
     border-top: 2px solid rgba(157, 78, 221, 0.3);
 }
 
-/* Fixed desktop layout for all devices */
-body {
-    min-width: 1000px;
-}
+
 
 /* Landing Page Styles */
 .landing-page {
@@ -536,5 +533,156 @@ body {
     }
     60% {
         transform: translateX(5px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 30px 10px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .main-nav {
+        gap: 10px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .main-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-link {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .main-container,
+    .page-container,
+    .contact-footer {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 20px auto 0;
+    }
+
+    .main-container section,
+    .page-container section {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .certificate-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .certificate-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .cert-img {
+        max-width: 150px;
+    }
+
+    .skills-list {
+        gap: 8px;
+    }
+
+    .skill {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .landing-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .welcome-section h2 {
+        font-size: 2rem;
+    }
+
+    .welcome-section p {
+        font-size: 1rem;
+    }
+
+    .arrow-button {
+        width: 50px;
+        height: 50px;
+        bottom: -60px;
+    }
+
+    .arrow-button span {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        gap: 15px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .main-container,
+    .page-container,
+    .contact-footer {
+        padding: 0 10px;
+    }
+
+    .main-container section,
+    .page-container section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .certificate-item {
+        padding: 15px;
+    }
+
+    .cert-img {
+        max-width: 120px;
+    }
+
+    .landing-container {
+        padding: 15px;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .welcome-section p {
+        font-size: 0.9rem;
     }
 }

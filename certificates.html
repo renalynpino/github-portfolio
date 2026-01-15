@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1000, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificates | Renalyn N. Pino</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -115,11 +115,6 @@
     </div>
 
     <script>
-        // Force viewport reset on page load
-        window.addEventListener('load', function() {
-            document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1000, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-        });
-
         function openModal(src) {
             document.getElementById('imageModal').style.display = 'flex';
             document.getElementById('modalImage').src = src;
@@ -128,16 +123,6 @@
         function closeModal() {
             document.getElementById('imageModal').style.display = 'none';
         }
-
-        // Prevent zoom on double tap
-        let lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            const now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
     </script>
 
 </body>
