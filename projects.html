@@ -6,14 +6,14 @@
     <title>Projects | Renalyn N. Pino</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="projects-page">
 
     <header>
         <div class="profile-container">
             <img src="./profile.jpg" alt="Renalyn Pino" class="profile-photo">
             <div class="profile-info">
                 <h1>Renalyn N. Pino</h1>
-                <p class="title">Computer Science Student</p>
+                <p class="title">Aspirant Data Analyst</p>
             </div>
         </div>
         <nav class="main-nav">
@@ -24,62 +24,69 @@
         </nav>
     </header>
 
-    <div class="page-container">
+    <div class="page-container project-page-container">
         <section id="projects">
             <h2>My Projects</h2>
-            <div class="project-item" onclick="toggleDetails('project1')">
-                <h3>DermaGlow AI <span class="arrow">▼</span></h3>
-                <div id="project1" class="project-details">
-                    <p><strong>Technologies:</strong> Python, OpenCV, Machine Learning</p>
-                    <p><strong>Description:</strong>The Dermatology Essentials and Product Ingredient Analyzer Bot is a tool designed for individuals to help them in developing smart choices about cosmetic essentials and skincare decisions. With the increase of beauty influencers, finding the right products for our skin can be demanding. This proposed bot is designed to analyzethe cosmetic product ingredients in terms of what benefits are associated with those ingredients and what side effects or allergic reactions they can cause. It also identifies users’ skin types and suggests appropriate ingredients and products based on their skin conditions, allergies, and spending limits.</p>
-                    <p><strong>Features:</strong></p>
-                    <ul>
-                        <li>Cosmetic Product Ingredient Analyzer</li>
-                        <li>Skin type assessment</li>
-                        <li>Allergen and irritant detection</li>
-                        <li>Ingredient benefits explanation</li>
-                        <li>Personalized skincare routine suggestions</li>
-                        <li>AI-powered chatbot interaction</li>
-                        <li> Skincare product dataset management</li>
-                    </ul>
-                    <p><strong>Link:</strong> https://github.com/renalynpino/DermaGlow-AI</p>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="project-item" onclick="toggleDetails('project2')">
-                <h3>Computer Repair Shop Management System <span class="arrow">▼</span></h3>
-                <div id="project2" class="project-details">
-                    <p><strong>Technologies:</strong> PHP, MySQL, HTML, CSS</p>
-                    <p><strong>Description:</strong> A web-based system built to manage repair requests, customers, and services for computer repair shops.</p>
-                    <p><strong>Features:</strong></p>
-                    <ul>
-                        <li>Customer management</li>
-                        <li>Repair tracking system</li>
-                        <li>Invoice generation</li>
-                       </ul>
-                </div>
-            </div>
-                
-            <div class="project-item" onclick="toggleDetails('project3')">
-                <h3>Client Appointment and Monitoring Management System for Laguna 
-                    Parole and Probation Office with SMS Notification (Enhanced/Debugged)<span class="arrow">▼</span></h3>
-                <div id="project3" class="project-details">
-                    <p><strong>Technologies:</strong> XAMPP, MySQL, phpMyAdmin, SQL Database</p>
-                    <p><strong>Description:</strong> This study presents the development and evaluation of a web-based Client Appointment and Monitoring Management System with SMS Notification designed specifically for the Laguna Parole and Probation Office (LPPO) in Sta. Cruz, Laguna, a capstone project system originally developed by Gilbert C. Etalla, Jerwin R. Pontipedra, and Rana S. Edgar Jr. Our goal on the other hand, is to enhance the system’s overall performance, user interface and other features for the LPPO. With Computer Science implementation, this improved version aims to make client scheduling more efficient, reduce missed appointments and help staff manage records more effectively.</p>
-                    <p><strong>Features:</strong></p>
-                    <ul>
-                        <li>Client account registration and verification (OTP via email)</li>
-                        <li>Appointment scheduling and monitoring</li>
-                        <li>Client status management (active, denied, revoked, archived)</li>
-                        <li>Automated parole/probation assignment</li>
-                        <li>Admin dashboard with search and record management</li>
-                        <li>LPPO assistant chatbot for user support</li>
-                    </ul>
-                    <p><strong>Link:</strong> https://github.com/renalynpino/Sofware-Engineering-2-Final-Project</p>
-                </div>
+            <div class="project-gallery">
+                <button class="project-card" type="button" onclick="openProject('project1')" aria-label="Open Superstore Sales Performance Dashboard project">
+                    <img class="project-cover" src="project-assets/superstore-cover.jpg" alt="Superstore warehouse with customers and shopping carts" onerror="this.style.display='none'; this.parentElement.classList.add('cover-missing');">
+                    <span class="project-card-content">
+                        <span class="project-card-label">Data Analytics Project 01</span>
+                        <strong>Superstore Sales Performance Dashboard</strong>
+                        <span class="project-card-tools">Excel / PostgreSQL / Tableau / Power BI</span>
+                        <span class="project-card-action">View project <span aria-hidden="true">↗</span></span>
+                    </span>
+                </button>
             </div>
         </section>
+    </div>
+
+    <div class="project-modal" id="project1" role="dialog" aria-modal="true" aria-labelledby="project1-title">
+        <div class="project-modal-panel">
+            <button class="project-modal-close" type="button" onclick="closeProject('project1')" aria-label="Close project details">&times;</button>
+            <div class="project-modal-header">
+                <p class="project-card-label">Data Analytics Project 01</p>
+                <h2 id="project1-title">Superstore Sales Performance Dashboard</h2>
+                <p>One dataset, four tools, and a complete workflow from data cleaning to interactive visualization.</p>
+            </div>
+            <div class="project-details project-modal-details">
+                    <p><strong class="project-section-heading">Project Overview:</strong><span class="project-section-text">Analyzed Superstore sales data to explore sales performance across product categories, sub-categories, states, regions, and shipping modes. This project demonstrates an end-to-end data analysis workflow using four tools.</span></p>
+                    <p><strong class="project-section-heading">Tools and Workflow:</strong></p>
+                    <ol>
+                        <li><strong>Microsoft Excel — Data Cleaning:</strong> Cleaned and organized the dataset by checking missing values, duplicates, date formats, column names, and data consistency.</li>
+                        <li><strong>PostgreSQL — SQL Analysis:</strong> Imported the cleaned dataset and used SQL queries to filter, aggregate, and examine sales data.</li>
+                        <li><strong>Tableau — Data Visualization:</strong> Created a dashboard featuring sales KPIs, category and sub-category comparisons, top states by sales, shipping modes, a regional sales map, and interactive filters.</li>
+                        <li><strong>Power BI — Dashboard Development:</strong> Recreated the Tableau dashboard using the same dataset, metrics, visualizations, and filters to demonstrate dashboard development in both tools.</li>
+                    </ol>
+                    <div class="dashboard-preview-section">
+                        <h3>Tableau Dashboard</h3>
+                        <div class="tableau-dashboard">
+                            <iframe id="tableau-dashboard-frame" src="https://public.tableau.com/views/SuperstoreSalesPerformanceDashboard_17929044801770/SuperstoreSalesPerformanceDashboard?:embed=yes&:showVizHome=no&:toolbar=no&:tabs=no" title="Superstore Sales Performance Dashboard on Tableau Public" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <a class="dashboard-link" href="https://public.tableau.com/views/SuperstoreSalesPerformanceDashboard_17929044801770/SuperstoreSalesPerformanceDashboard?:showVizHome=no" target="_blank" rel="noopener">Open interactive Tableau dashboard</a>
+                        <span class="tableau-profile-label">You can also visit:</span>
+                        <a class="tableau-profile-link" href="https://public.tableau.com/app/profile/renalyn.pino/vizzes" target="_blank" rel="noopener noreferrer">https://public.tableau.com/app/profile/renalyn.pino/vizzes</a>
+                    </div>
+                    <div class="dashboard-preview-section powerbi-dashboard-section">
+                        <h3>Power BI Dashboard Preview</h3>
+                        <div class="powerbi-preview">
+                            <img src="project-assets/powerbi-dashboard.png" alt="Power BI Superstore Sales Performance Dashboard screenshot" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+                            <p hidden>Power BI screenshot preview will appear here once <strong>powerbi-dashboard.png</strong> is added to the project-assets folder.</p>
+                        </div>
+                    </div>
+                    <p class="objective-section"><strong class="project-section-heading">Objective:</strong><span class="project-section-text">To demonstrate practical skills in data cleaning, SQL querying, and dashboard development while presenting sales data in an interactive and accessible format.</span></p>
+                    <p class="skills-section"><strong class="project-section-heading">Skills Demonstrated:</strong><span class="project-section-text">Data Cleaning, Data Validation, Data Manipulation, Data Analysis, Data Visualization, SQL, PostgreSQL, Microsoft Excel, Tableau, and Power BI</span></p>
+                    <p class="project-files-heading"><strong class="project-section-heading">Project Files:</strong></p>
+                    <ul>
+                        <li><a href="project-assets/raw_data.csv" download>Raw Dataset (CSV)</a></li>
+                        <li><a href="project-assets/cleaned_superstore.xlsx" download>Cleaned Dataset (Excel)</a></li>
+                        <li><a href="project-assets/superstore_sales_with_visualizations.xlsx" download>Excel Workbook with Visualizations</a></li>
+                        <li><a href="project-assets/superstore_analysis.sql" download>PostgreSQL Analysis Queries (SQL)</a></li>
+                        <li><a href="project-assets/Superstore Sales Performance Dashboard.twbx" download>Tableau Workbook</a></li>
+                        <li><a href="project-assets/Superstore_Sales.pbix" download>Power BI Report</a></li>
+                    </ul>
+            </div>
+        </div>
     </div>
 
     <div class="contact-footer">
@@ -87,7 +94,7 @@
         <div class="contact-info">
             <p><strong>Email:</strong> renalynpino27@gmail.com</p>
             <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">https://github.com/renalynpino</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourusername" target="_blank">https://www.linkedin.com/in/renalyn-pino-6b5951178</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/renalyn-pino-6b5951178/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/renalyn-pino-6b5951178/</a></p>
         </div>
     </div>
 
@@ -96,18 +103,44 @@
     </footer>
 
     <script>
-        function toggleDetails(id) {
-            const details = document.getElementById(id);
-            const arrow = details.previousElementSibling.querySelector('.arrow');
+        function openProject(id) {
+            document.getElementById(id).classList.add('is-open');
+            document.body.classList.add('modal-open');
+            refreshTableau();
+        }
 
-            if (details.style.display === 'block') {
-                details.style.display = 'none';
-                arrow.textContent = '▼';
-            } else {
-                details.style.display = 'block';
-                arrow.textContent = '▲';
+        function closeProject(id) {
+            document.getElementById(id).classList.remove('is-open');
+            document.body.classList.remove('modal-open');
+        }
+
+        function refreshTableau() {
+            const tableauFrame = document.getElementById('tableau-dashboard-frame');
+
+            if (tableauFrame) {
+                window.setTimeout(function () {
+                    tableauFrame.src = tableauFrame.src;
+                }, 100);
             }
         }
+
+        document.getElementById('project1').addEventListener('click', function (event) {
+            if (event.target === this) {
+                closeProject('project1');
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeProject('project1');
+            }
+        });
+
+        document.addEventListener('fullscreenchange', function () {
+            if (!document.fullscreenElement && document.getElementById('project1').classList.contains('is-open')) {
+                refreshTableau();
+            }
+        });
     </script>
 
 </body>
